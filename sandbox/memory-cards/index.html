@@ -12,31 +12,18 @@
 </head>
 <body>
     <button id="clear" class="clear btn"><i class="fas fa-trash"></i> Clear cards</button>
-    <h1>Memory Cards
-        <button id="show" class="btn btn-small"><i class="fas fa-plus"></i> Add New Card</button>
+    <h1>
+        <button id="show-add-topic" class="btn btn-small btn-top"><i class="fas fa-plus"></i> Add New Topic</button>
+        Memory Cards
+        <button id="show-add-card" class="btn btn-small btn-bottom"><i class="fas fa-plus"></i> Add New Card</button>
     </h1>
 
+    <div class="form-group">
+        <label for="choose-topic">Topic</label>
+        <select id="choose-topic"></select>
+    </div>
+
     <div id="cards-container" class="cards">
-        <!-- <div class="card active">
-            <div class="inner-card">
-                <div class="inner-card-front">
-                    <p>What is PHP?</p>
-                </div>
-                <div class="inner-card-back">
-                    A programming language
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="inner-card">
-                <div class="inner-card-front">
-                    <p>What is JavaScript?</p>
-                </div>
-                <div class="inner-card-back">
-                    Another programming language
-                </div>
-            </div>
-        </div> -->
     </div>
 
     <div class="navigation">
@@ -48,11 +35,34 @@
     </div>
 
     <div id="add-container" class="add-container">
-        <h1>Add New Card
+        <h1>Add New Topic
             <button id="hide" class="btn btn-small btn-ghost">
                 <i class="fas fa-times"></i>
             </button>
         </h1>
+
+        <div class="form-group">
+            <label for="new-topic">Topic</label>
+            <input type="text" name="" id="new-topic" placeholder="Enter new topic..."></textarea>
+        </div>
+
+        <button id="add-topic" class="btn">
+            <i class="fas fa-plus"></i> Add Topic
+        </button>
+
+    </div>
+
+    <div id="add-card-container" class="add-container">
+        <h1>Add New Card
+            <button id="hide-add-card" class="btn btn-small btn-ghost">
+                <i class="fas fa-times"></i>
+            </button>
+        </h1>
+
+        <div class="form-group">
+            <label for="topic">Topic</label>
+            <select id="topic"></select>
+        </div>
 
         <div class="form-group">
             <label for="question">Question</label>

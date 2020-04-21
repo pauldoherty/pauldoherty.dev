@@ -23,8 +23,13 @@ h1 {
 h1 button {
     position: absolute;
     right: 0;
-    transform: translate(120%, -50%);
+    transform: translate(120%, 20%);
     z-index: 2;
+    width: 120px
+}
+
+h1 button.btn-top {
+    transform: translate(120%, -120%);
 }
 
 .btn {
@@ -59,6 +64,7 @@ h1 button {
     height: 300px;
     width: 500px;
     max-width: 100%;
+    margin-top: 20px;
 }
 
 .card {
@@ -177,7 +183,9 @@ h1 button {
     margin: 20px 0 10px;;
 }
 
-.form-group textarea {
+.form-group textarea,
+.form-group input[type=text],
+.form-group select {
     border: 1px solid #aaa;
     border-radius: 3px;
     font-size: 16px;

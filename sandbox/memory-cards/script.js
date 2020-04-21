@@ -2,37 +2,27 @@ const cardsContainer = document.getElementById('cards-container');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 const currentEl = document.getElementById('current');
-const showBtn = document.getElementById('show');
-const hideBtn = document.getElementById('hide');
+const showAddCardBtn = document.getElementById('show-add-card');
+const hideAddCardBtn = document.getElementById('hide-add-card');
+const newTopicEl = document.getElementById('new-topic');
+const addTopicBtn = document.getElementById('add-topic');
+const chooseTopicEl = document.getElementById('choose-topic');
+const topicEl = document.getElementById('topic');
 const questionEl = document.getElementById('question');
 const answerEl = document.getElementById('answer');
 const addCardBtn = document.getElementById('add-card');
 const clearBtn = document.getElementById('clear');
-const addContainer = document.getElementById('add-container');
+const addCardContainer = document.getElementById('add-card-container');
 
 let currentActiveCard = 0;
 
 const cardsEl = [];
 
+const topicsData = getTopicsData();
 const cardsData = getCardsData();
 
-// const cardsData = [
-//   {
-//     question: 'What must a variable begin with?',
-//     answer: 'A letter, $ or _'
-//   },
-//   {
-//     question: 'What is a variable?',
-//     answer: 'Container for a piece of data'
-//   },
-//   {
-//     question: 'Example of Case Sensitive Variable',
-//     answer: 'thisIsAVariable'
-//   }
-// ];
-
-function createCards() {
-    cardsData.forEach((data, index) => createCard(data, index))
+function createCards(data) {
+    data.forEach((data, index) => createCard(data, index))
 }
 
 function createCard(data, index) {
@@ -54,16 +44,27 @@ function createCard(data, index) {
     `;
 
     card.addEventListener('click', () => card.classList.toggle('show-answer'));
-
     cardsEl.push(card);
-
     cardsContainer.appendChild(card);
-
     updateCurrentText();
 }
 
 function updateCurrentText() {
     currentEl.innerText = ` ${ currentActiveCard + 1} / ${ cardsEl.length }`;
+}
+
+function getTopicsData() {
+    let topics = JSON.parse(localStorage.getItem('topics'));
+    if (topics===null) {
+        localStorage.setItem('topics', JSON.stringify([{'topic':'General'}]));
+        topics = JSON.parse(localStorage.getItem('topics'));
+    }
+    return topics;
+}
+
+function setTopicsData(cards) {
+    localStorage.setItem('topics', JSON.stringify(cards));
+    window.location.reload();
 }
 
 function getCardsData() {
@@ -76,7 +77,19 @@ function setCardsData(cards) {
     window.location.reload();
 }
 
-createCards();
+function createTopicDropdown(topicsData, elementToFill) {
+    topicsData.forEach((data, index) => {
+        const option = document.createElement('option');
+        if (index===0) {option.setAttribute('selected', 'selected')};
+        option.setAttribute('value', data.topic);
+        option.innerText = data.topic;
+        elementToFill.appendChild(option);
+    })
+}
+
+createCards(cardsData);
+createTopicDropdown(topicsData, topicEl);
+createTopicDropdown(topicsData, chooseTopicEl);
 
 nextBtn.addEventListener('click', () => {
     cardsEl[currentActiveCard].className = 'card left';
@@ -86,47 +99,64 @@ nextBtn.addEventListener('click', () => {
     if(currentActiveCard > cardsEl.length -1) {
         currentActiveCard = cardsEl.length -1;
     }
-
     cardsEl[currentActiveCard].className = 'card active';
-
     updateCurrentText();
 })
 
 prevBtn.addEventListener('click', () => {
     cardsEl[currentActiveCard].className = 'card right';
-
     currentActiveCard = currentActiveCard-1;
-
     if(currentActiveCard < 0) {
         currentActiveCard = 0;
     }
-
     cardsEl[currentActiveCard].className = 'card active';
-
     updateCurrentText();
 })
 
-showBtn.addEventListener('click', () => addContainer.classList.add('show'));
-hideBtn.addEventListener('click', () => addContainer.classList.remove('show'));
+showAddCardBtn.addEventListener('click', () => addCardContainer.classList.add('show'));
+hideAddCardBtn.addEventListener('click', () => addCardContainer.classList.remove('show'));
+
+addTopicBtn.addEventListener('click', () =>{
+    const topic = newTopicEl.value;
+
+    if (topic.trim()) {
+        const newTopic = { topic }
+        newTopicEl.value = '';
+        addCardContainer.classList.removecard-('show');
+        topicsData.push(newTopic);
+        setTopicsData(topicsData);
+    }
+})
 
 addCardBtn.addEventListener('click', () => {
+    const topic = topicEl.value;
     const question = questionEl.value;
     const answer = answerEl.value;
 
     if(question.trim() && answer.trim()) {
-        const newCard = { question, answer }
+        const newCard = { topic, question, answer }
 
         createCard(newCard)
 
         questionEl.value = '';
         answerEl.value = '';
 
-        addContainer.classList.remove('show');
+        addCardContainer.classList.removecard-('show');
         cardsData.push(newCard);
 
         setCardsData(cardsData);
     }
 });
+
+chooseTopicEl.addEventListener('change', e => {
+    let filterCardsData = cardsData;
+    if (event.target.value!=='General') {
+        filterCardsData = cardsData.filter(card => card.topic === e.target.value)
+    }
+    cardsContainer.innerHTML = '';
+    cardsEl.splice(0, cardsEl.length);
+    createCards(filterCardsData);
+})
 
 clearBtn.addEventListener('click', () => {
     localStorage.removeItem('cards');
