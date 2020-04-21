@@ -23,13 +23,17 @@ h1 {
 h1 button {
     position: absolute;
     right: 0;
-    transform: translate(120%, 20%);
+    transform: translate(120%, -50%);
     z-index: 2;
     width: 120px
 }
 
 h1 button.btn-top {
     transform: translate(120%, -120%);
+}
+
+h1 button.btn-bottom {
+    transform: translate(120%, 20%);
 }
 
 .btn {
