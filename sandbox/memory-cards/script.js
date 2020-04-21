@@ -2,6 +2,8 @@ const cardsContainer = document.getElementById('cards-container');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 const currentEl = document.getElementById('current');
+const showAddTopicBtn = document.getElementById('show-add-topic');
+const hideAddTopicBtn = document.getElementById('hide-add-topic');
 const showAddCardBtn = document.getElementById('show-add-card');
 const hideAddCardBtn = document.getElementById('hide-add-card');
 const newTopicEl = document.getElementById('new-topic');
@@ -12,6 +14,7 @@ const questionEl = document.getElementById('question');
 const answerEl = document.getElementById('answer');
 const addCardBtn = document.getElementById('add-card');
 const clearBtn = document.getElementById('clear');
+const addTopicContainer = document.getElementById('add-topic-container');
 const addCardContainer = document.getElementById('add-card-container');
 
 let currentActiveCard = 0;
@@ -112,6 +115,9 @@ prevBtn.addEventListener('click', () => {
     cardsEl[currentActiveCard].className = 'card active';
     updateCurrentText();
 })
+
+showAddTopicBtn.addEventListener('click', () => addTopicContainer.classList.add('show'));
+hideAddTopicBtn.addEventListener('click', () => addTopicContainer.classList.remove('show'));
 
 showAddCardBtn.addEventListener('click', () => addCardContainer.classList.add('show'));
 hideAddCardBtn.addEventListener('click', () => addCardContainer.classList.remove('show'));
