@@ -1,0 +1,36 @@
+.row.site {
+    margin-bottom: 0;
+}
+
+.error {
+    border-color: red;
+}
+
+.paper {
+    background: url('../img/bgPusheen-transparent.png');
+    height    : 100vh;
+    overflow-y: auto;
+}
+
+.paper-btn {
+    padding: .5rem;
+}
+
+.delete-btn {
+    padding      : 0 .25rem;
+    margin-bottom: 0;
+}
+
+.hide {
+    display: none
+}
+
+table {
+    max-width: 400px
+}
+
+table img {
+    max-height: 40px;
+    border    : 0;
+    ;
+}
