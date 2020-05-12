@@ -51,7 +51,7 @@ function submitForm() {
     }
     ftData.push(newInput)
     oData.updateLocalStorage();
-    init();
+    UI.init();
 }
 
 let oData = {
@@ -76,7 +76,7 @@ let oData = {
     removeFood: (id) => {
         ftData = ftData.filter(food => food.id !== id);
         oData.updateLocalStorage();
-        init();
+        UI.init();
     },
     updateLocalStorage: () => {
         localStorage.setItem('fibreTrackerData', JSON.stringify(ftData));
