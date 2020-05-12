@@ -12,6 +12,7 @@ btnSeeHistory.addEventListener('click', () => UI.hideShow(seeResults));
 
 ftDate.valueAsDate = new Date();
 
+// Get the data and 
 const lsFTData = JSON.parse(localStorage.getItem('fibreTrackerData'));
 let ftData = lsFTData !== null ? lsFTData : [];
 //    let ftData = [];
@@ -82,7 +83,12 @@ let oData = {
     },
     generateID: () => {
         return Math.floor(Math.random() * 100000000)
+    },
+    uniqueFoods: () => {
+        const uniqueFood = [...new Set(ftData.map(item => item.food))];
+        return uniqueFood;
     }
+
 }
 
 let UI = {
@@ -137,6 +143,10 @@ let UI = {
             section.classList.add('hide');
         });
         toShow.classList.remove('hide')
+    },
+    init: () => {
+        UI.createFoodTable();
+        UI.createWeeklyTable();
     }
 }
 
@@ -156,9 +166,19 @@ let oDates = {
 
 }
 
-function init() {
-    UI.createFoodTable();
-    UI.createWeeklyTable();
-}
+UI.init();
 
-init();
+let foodsAutoComplete = new autoComplete({
+    selector: '#ftFood',
+    minChars: 2,
+    source: function (term, suggest) {
+        term = term.toLowerCase();
+        var choices = oData.uniqueFoods();
+        var matches = [];
+        for (i = 0; i < choices.length; i++)
+            if (~choices[i].toLowerCase().indexOf(term)) matches.push(choices[i]);
+        suggest(matches);
+    }
+});
+
+//foodsAutoComplete.destroy()
