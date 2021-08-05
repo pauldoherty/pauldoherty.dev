@@ -1,0 +1,24 @@
+{
+  "name": "pauldoherty.dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauldoherty/pauldoherty.dev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pauldoherty/pauldoherty.dev/issues"
+  },
+  "homepage": "https://github.com/pauldoherty/pauldoherty.dev#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
