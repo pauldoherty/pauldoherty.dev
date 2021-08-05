@@ -6,7 +6,7 @@ templateEngineOverride: njk
 
 <h2>{{ title }}</h2>
 
-<h3>Professional front end developer, amateur wire-haired dachshund (Ted) wrangler and better than hopeless (just) golf enthusiast.</h3>
+<h3>Professional front end developer, amateur wire-haired dachshund (Ted) wrangler and better than hopeless (just) golfer.</h3>
 
 
 <p>Front end development is my bread and butter, this encompasses everything from HTML to build the structure of the page, to CSS to style the page and make it look beautiful and then throwing some JavaScript on top to make the page more interactive.</p>
