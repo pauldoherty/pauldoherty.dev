@@ -384,7 +384,8 @@ footer {
   
 }
 
-.test-style {
+test-style {
   font-size: 1rem;
+  font-weight: normal;
 }
 /*# sourceMappingURL=style.css.map */
