@@ -77,6 +77,10 @@ h6 {
   display: block;
 }
 
+.main-column {
+  margin-bottom: 3rem;
+}
+
 @media only screen and (min-width: 768px) {
   .bordered {
     display: inline-block;
@@ -320,6 +324,23 @@ nav a {
   z-index: 100;
 }
 
+footer {
+  background-color: #eee;
+  bottom: 0;
+  display: flex;
+  padding: .5rem;
+  position: fixed;
+  width: 100%;
+}
+
+.footer__links {
+  text-align: center;
+}
+
+.footer__links span {
+  margin: 1rem;
+}
+
 @media screen and (min-width: 768px) {
    .d-md-none  {
      display: none;
@@ -356,6 +377,9 @@ nav a {
     top: 15px;
     right: 0;
     bottom: 0;
+  }
+  .main-column {
+    margin-bottom: 1rem;
   }
   
 }

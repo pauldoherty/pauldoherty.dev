@@ -13,7 +13,7 @@ templateEngineOverride: njk
 
 <p>Coupling this with some some great back end integration skills for hooking into CMS / e-Commerce systems, or PHP, .net, Java / JSP systems.</p>
 
-<p>Also, the right hand side of my brain comes into play with when it comes to UI / UX, as over my years of working with the Web, I know what works and what doesn't work.</p>
+<p>Also, the right hand side of my brain comes into play when it comes to UI / UX, as over my years of working with the Web, I know what works and what doesn't work.</p>
 
 
 <h3 class="bordered fullwidth">My skills</h3>
