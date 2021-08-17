@@ -247,6 +247,15 @@ ul li {
   background-size: 1.2rem;
 }
 
+.icn-twitter {
+  fill: #43BCEB;
+}
+
+.icn-linkedin {
+  fill: #0077B7;
+}
+
+
 .project-carousel {
   display: none;
 }
