@@ -5,9 +5,9 @@ blurb: How I got into web development by accident in 1996
 
 ### How I got into web developement 
 
-<p>So it was 1996, I had finished my A-levels a couple of years earlier. University hadn't gone the way I had hoped, so I was working in as a production planner in a cardboard box factory I was working in Scunthorpe and not very happy with my situation in life.</p>
+<p>So it was 1996, I had finished my A-levels a couple of years earlier. University hadn't gone the way I had hoped, so I was working in as a production planner in a cardboard box factory in Scunthorpe and not very happy with my situation in life.</p>
 
-<p>A relative of mine had moved out to Hong Kong earlier in the year and got in touch with me and let me know there was lots of work in Hong Kong, as there was a boom going on before it was handed back to the Chinese in 1997. Scunthorpe or Hong Kong? Tough choice, but after some long and considered thought (well as much as a 20 year old is capable of) I decided to try Hong Kong. I had a little money saved, so if it didn't work out I would travel round South East Asia for a while with the rest of the back packing community and worry about the future then, that was after all future Paul's problem.</p>
+<p>A relative of mine had moved out to Hong Kong earlier in the year. They got in touch with me and let me know there was lots of work in Hong Kong, as there was a construction boom going on before it was handed back to the Chinese in 1997. Scunthorpe or Hong Kong? Tough choice, but after some long and considered thought (well as much as a 20 year old is capable of) I decided to try Hong Kong. I had a little money saved, so if it didn't work out I would travel round South East Asia for a while with the rest of the back packing community and worry about the future then, that was after all future Paul's problem.</p>
 
 <p>After arriving in Hong Kong, I met a friend of a friend in a bar who ran a recruitment agency. He said they had a massive backlog of CV's that needed putting into the company database and I was welcome to do it on a temp basis whilst I got myself sorted out. He said it would be able 2 months worth of work which would take me into the New Year.</p>
 

@@ -1,10 +1,11 @@
 ---
-title: About me
+title: Paul Doherty - Front End Developer
+pagetitle: About me
 layout: base.njk
 templateEngineOverride: njk
 ---
 
-<h2>{{ title }}</h2>
+<h2>{{ pagetitle }}</h2>
 
 <h3>Professional front end developer, amateur wire-haired dachshund (Ted) wrangler and better than hopeless (just) golfer.</h3>
 
