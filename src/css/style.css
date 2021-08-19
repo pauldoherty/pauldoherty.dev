@@ -61,8 +61,13 @@ h6 {
 }
 
 .aside__main {
-  display: none;
+  display: block;
   padding-top: 1rem;
+  transition: display 0.35s ease-in-out; 
+}
+
+.aside__main:not(.active) {
+  display: none;
 }
 
 .bordered {
@@ -85,6 +90,10 @@ h6 {
   .bordered {
     display: inline-block;
   }
+  .aside__main:not(.active) {
+    display: block;
+  }
+  
 }
 
 .p-5 {
@@ -255,10 +264,6 @@ ul li {
   fill: #0077B7;
 }
 
-
-.project-carousel {
-  display: none;
-}
 
 .project-carousel img {
   max-width: 100%;

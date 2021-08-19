@@ -82,7 +82,7 @@
         <a href="#" class="btn project-show" data-projects="nap--projects">Show Projects</a>
     </div>
 
-    <div class="column col-12 project-carousel" id="nap--projects">
+    <div class="column col-12 project-carousel d-none" id="nap--projects">
 
         <div class="columns pb-2">
             <div class="column col-6 col-sm-12">
@@ -175,7 +175,7 @@
         <a href="#" class="btn project-show" data-projects="em--projects">Show Projects</a>
     </div>
 
-    <div class="column col-12 project-carousel" id="em--projects">
+    <div class="column col-12 project-carousel d-none" id="em--projects">
 
         <div class="columns">
             <div class="column col-6 col-sm-12">
@@ -323,17 +323,4 @@
     </div>
 </div>
 
-
-        <script>
-            $(function () {
-                $('.project-show').on('click', function (e) {
-                    e.preventDefault();
-                    let newText = ($(this).text() == 'Show Projects')
-                        ? 'Hide Projects'
-                        : 'Show Projects'
-                    $(this).text(newText)
-                    $('#' + $(this).data('projects')).toggle();
-                })
-            })
-        </script>
 

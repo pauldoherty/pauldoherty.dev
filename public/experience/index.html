@@ -135,7 +135,7 @@
         <a href="#" class="btn project-show" data-projects="nap--projects">Show Projects</a>
     </div>
 
-    <div class="column col-12 project-carousel" id="nap--projects">
+    <div class="column col-12 project-carousel d-none" id="nap--projects">
 
         <div class="columns pb-2">
             <div class="column col-6 col-sm-12">
@@ -228,7 +228,7 @@
         <a href="#" class="btn project-show" data-projects="em--projects">Show Projects</a>
     </div>
 
-    <div class="column col-12 project-carousel" id="em--projects">
+    <div class="column col-12 project-carousel d-none" id="em--projects">
 
         <div class="columns">
             <div class="column col-6 col-sm-12">
@@ -377,19 +377,6 @@
 </div>
 
 
-        <script>
-            $(function () {
-                $('.project-show').on('click', function (e) {
-                    e.preventDefault();
-                    let newText = ($(this).text() == 'Show Projects')
-                        ? 'Hide Projects'
-                        : 'Show Projects'
-                    $(this).text(newText)
-                    $('#' + $(this).data('projects')).toggle();
-                })
-            })
-        </script>
-
 
                 </main>
             </columns>
@@ -403,18 +390,9 @@
                 </div>
             </div>
         </footer>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-        <script>
-            $(function(){
-                $('.icon-menu').on('click', function(){
-                    $('.aside__main').slideToggle();
-                })
-                $('.back-to-top').on('click', function(){
-                    $("html, body").animate({ scrollTop: 0 }, "slow");
-                    return false;
-                })
-            }())
+        <script src="/js/script.js">
+
         </script>
     </body>
 </html>
