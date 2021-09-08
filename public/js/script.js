@@ -1,6 +1,6 @@
     /* Toggle menu */
     const menuToggleBtn = document.querySelector('.icon-menu');
-    const menuContainer = document.querySelector('.aside-main');
+    const menuContainer = document.querySelector('.aside__main');
 
     menuToggleBtn.addEventListener('click', () => {
         menuContainer.classList.toggle('active');
