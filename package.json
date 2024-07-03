@@ -1,7 +1,6 @@
 {
   "name": "pauldoherty.dev",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
@@ -20,5 +19,6 @@
   "homepage": "https://github.com/pauldoherty/pauldoherty.dev#readme",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1"
-  }
+  },
+  "description": ""
 }
